@@ -30,7 +30,7 @@ namespace TheWamdahShop.Controllers
         [Route("details/{id:int}")]
         public IActionResult Details(int id)
         {
-            var personById = repository.People.FindByCondition(p => p.ID == id).FirstOrDefault();
+            var personById = repository.People.FindByCondition(p => p.ID == id);
            // var personById = dbContext.People.FirstOrDefault(p => p.ID == id);
             return View(personById);
         }
