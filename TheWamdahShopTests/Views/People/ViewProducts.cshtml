@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<TheWamdahShop.Models.Product>
 
-@{ ViewData["Title"] = "Products"; }
+@{
+    ViewData["Title"] = "Products";
+}
 
 <h1>@ViewBag.PersonName's Products</h1>
 
@@ -23,17 +25,17 @@
     <tbody>
         @foreach (var item in Model)
         {
-<tr>
-    <td>
-        <img src="@item.PictureURL" style="height:128px;" />
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Price)
-    </td>
-</tr>}
+            <tr>
+                <td>
+                    <img src="@item.PictureURL" style="height:128px;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
-<a href="##" onClick="history.go(-1); return false;">Go back</a> 
