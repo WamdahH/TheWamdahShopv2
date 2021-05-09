@@ -37,7 +37,7 @@ namespace TheWamdahShopTests
             products = new List<Product>();
        
 
-            //update = new Update { Name = "CS101", Price = "Understanding Computing Basics" };
+            //update = new Update { Name = "", Price = "" };
 
           
             _logger = new Mock<ILogger<ProductsController>>();
@@ -50,7 +50,7 @@ namespace TheWamdahShopTests
             productsController = new ProductsController(_logger.Object, mockRepo.Object);
         }
         [Fact]
-        public void GetAllProduts_Test()
+        public void GetAllProducts_Test()
         {
            
             mockRepo.Setup(repo => repo.Products.FindAll()).Returns(GetProducts());
@@ -66,10 +66,10 @@ namespace TheWamdahShopTests
             //Arrange
             mockRepo.Setup(repo => repo.Products.FindByCondition(p => p.ID == It.IsAny<int>())).Returns(GetProducts());
             //Act
-            //var controllerActionResult = productsController.Post(addProduct);
+           // var controllerActionResult = productsController.Post(addproduct);
             //Assert
-           // Assert.NotNull(controllerActionResult);
-           // Assert.IsType<ActionResult<CourseViewModel>>(controllerActionResult);
+          //  Assert.NotNull(controllerActionResult);
+          
         }
         [Fact]
         public void DeleteProduct_Test()

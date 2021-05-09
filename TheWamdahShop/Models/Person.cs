@@ -13,7 +13,7 @@ namespace TheWamdahShop.Models
         public string Address { get; set; }
         public string Email { get; set; }
         public DateTime CreatedAt { get; set; }
-
+        
         public virtual List<Product> Products { get; set; }
     }
 }
