@@ -28,7 +28,6 @@ namespace TheWamdahShopTests
         private Mock<IUpdateProduct> updateProductMock;
 
         public ProductControllerTests()
-
         {
             
             productMock = new Mock<IProduct>();
